@@ -1,0 +1,223 @@
+/*
+! https://www.instagram.com/uibuniversitat/
+*/
+/*FONT: ROBOTO*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*SEPARAMOS ASIDE-NAV DE MAIN*/
+body {
+    display: grid;
+    grid-template-columns: 250px auto 935px auto;
+    grid-template-rows: auto;
+    background:#fafafa;
+
+
+}
+
+/*CENTER MAIN, incluye el "grid-template-columns: 200px auto 935px auto;" en el body*/
+aside {
+    grid-column: 1 / 2;
+}
+
+main {
+    grid-column: 3 / 4;
+    margin-top: 30px;
+    
+
+
+    /*manera 2, con el "grid-template-columns: 200px auto; en el body"
+    margin: auto;
+    margin-top: 30px;
+    width: 935px;*/
+}
+
+
+
+/*RESIZING LOGO*/
+.instagram_logo {
+    width: 70px;
+    height: auto;
+}    
+
+
+/* menu -> aside */
+aside {
+    background: white;
+    border-right: solid 2px #dbdbdb;
+    height: 100%;
+
+    position: fixed;
+    height: 100%;  
+    width: 250px;
+}
+
+
+
+
+/* opciones fijar aside*/
+/* 
+
+    ! las opciones para fijar el aside::after
+   aside { opción 1 aside: 
+    position: fixed;
+    height: 100%;  
+    width: 250px;  }
+
+    ! opción 2 aside: lo hacemos para mejorar el posicionamiento del aside 
+    height: 100vh;
+
+
+    ! opción 3 aside: usamosel height: 100%, más lo iguiente: que solo haga scroll el main
+    overflow: scroll;
+
+
+
+*/
+
+aside > a.more-menu {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+/*PROFILE HEADER*/
+
+main > header {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: repeat(4, auto);
+}
+
+main > header > img {
+    grid-column: 1 / 2;
+    grid-row:  1 / 5;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: #dedede 2px double;
+}
+
+main > header > div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row:  1 / 2;
+
+    display: flex;
+    gap: 10px;
+}
+
+main > header > div:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row:  2 / 3;
+
+    display: flex;
+    gap: 10px;
+}
+
+main > header > div:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row:  3 / 4;
+}
+
+main > header > div:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row:  4 / 5;
+}
+
+/*STORIES*/
+
+main > div.stories {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 935px;
+    overflow: scroll hidden;
+}
+
+main > div.stories > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+main > div.stories > div > img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: #dedede 2px double;
+}
+
+main > div.stories > div > span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* posts menu */
+
+main > div.posts-menu > div.PRT {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    border-top: 1px solid #dedede;
+    padding: 20px;
+    width: 935px;
+}
+
+main > div.posts-menu > div.PRT > a {
+    text-decoration: none;
+}
+
+/* posts menu - posts */
+main > div.posts-menu > div.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+main > div.posts-menu > div.posts > img {
+    width: 293px;
+    height: 293px;
+    object-fit: cover; /*tamany img. Només per imgs*/ /*object-position: ; posicio img */
+}
+
+main > div.posts-menu > div.posts > img.a-person {
+    object-position: top; /*posicio img */
+}
+
+
+
+
+
+
+
+
+/*  responsive */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: aquamarine;
+    }
+
+
+
+}
+
+
+    
