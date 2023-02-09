@@ -201,6 +201,9 @@ main > div.posts-menu > div.posts > img.a-person {
     object-position: top; /*posicio img */
 }
 
+header.mobile-menu {
+    display: none;
+}
 
 
 
@@ -208,11 +211,63 @@ main > div.posts-menu > div.posts > img.a-person {
 
 
 
-/*  responsive */
+
+/* Make this site responsive (for mobile version) */
 
 @media only screen and (max-width: 600px) {
     body {
-        background-color: aquamarine;
+        /*display: flex;
+        flex-direction: column;
+        width: 100%;*/
+
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+
+    }
+
+    main {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3 ;
+    }
+
+
+    aside {
+        display: none;
+
+    }
+
+    header.mobile-menu {
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    header.header-profile {
+        width: 100%;
+    }
+
+    .barra {
+        display: flex;
+        justify-content: left;
+    }
+
+    .menu-mobile-oculto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main > div.stories {
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    main > div.posts-menu > div.PRT {
+        width: 100%
+    }
+
+    div.posts {
+        width: 100%
     }
 
 

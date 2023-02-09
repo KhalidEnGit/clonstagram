@@ -2,7 +2,6 @@
 <html lang="ca">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Instagram</title>
@@ -41,6 +40,46 @@
       </nav>
       <a class="more-menu" href="#more"><i class="fa-solid fa-bars"></i> More</a>
     </aside>
+
+    <header class="mobile-menu">
+      <div class="barra">
+        <button><i class="fa-solid fa-bars"></i></button>
+      </div>
+
+      <div class="menu-mobile-oculto">
+        <img class="instagram_logo" src="./src/Instagram_logo.svg.png" alt="Logo de Instagram" />
+        <nav class="aside-nav">
+          <ul>
+            <li>
+              <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li>
+              <a href="#search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </li>
+            <li>
+              <a href="#explore"><i class="fa-regular fa-compass"></i> Explore</a>
+            </li>
+            <li>
+              <a href="#reels"><i class="fa-solid fa-film"></i> Reels</a>
+            </li>
+            <li>
+              <a href="#messages"><i class="fa-regular fa-paper-plane"></i> Messages</a>
+            </li>
+            <li>
+              <a href="#notifications"><i class="fa-regular fa-heart"></i> Notifications</a>
+            </li>
+            <li>
+              <a href="#create"><i class="fa-regular fa-square-plus"></i> Create</a>
+            </li>
+            <li>
+              <a href="#profile"><i class="fa-regular fa-user"></i> Profile</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="more-menu" href="#more"><i class="fa-solid fa-bars"></i> More</a>
+      </div>
+      
+    </header>
 
     <main>
       <header class="header-profile">
@@ -233,5 +272,24 @@
     <footer></footer>
     <!--Fontawesom icons-->
     <script src="https://kit.fontawesome.com/947ee1331a.js" crossorigin="anonymous"></script>
-  </body>
+  
+  <!-- Menu desplegable movil con JavaScript-->
+  <script>
+    document.querySelector(".barra").addEventListener("click", function(){
+      const mobile = document.querySelector(".menu-mobile-oculto");
+      const visible = mobile.style.display!=='block';
+      if (visible){
+        mobile.style.display = 'block';
+      } else {
+        mobile.style.display = 'none';
+      }
+    })
+
+    
+  </script>
+  
+  
+  
+  
+</body>
 </html>
