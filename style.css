@@ -276,8 +276,8 @@ header.mobile-menu {
     }
 
     main > div.posts-menu > div.posts > img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         object-fit: cover; /*tamany img. Només per imgs*/ /*object-position: ; posicio img */
     }
  
