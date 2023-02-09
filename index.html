@@ -43,8 +43,14 @@
 
     <header class="mobile-menu">
       <div class="barra">
-        <button><i class="fa-solid fa-bars"></i></button>
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
       </div>
+
+      <picture class="picture">
+        <source media="(min-width:650px)" srcset="./src/Instagram_files/favicon-96x96">
+        <source media="(min-width:450px)" srcset="./src/Instagram_files/favicon-32x32">
+        <img src="./src/Instagram_files/favicon-16x16.png" alt="favicon 16x16px">
+      </picture>
               <!-- Comentario-->
       <div class="menu-mobile-oculto">
         <img class="instagram_logo" src="./src/Instagram_logo.svg.png" alt="Logo de Instagram" />
@@ -275,7 +281,7 @@
   
   <!-- Menu desplegable movil con JavaScript-->
   <script>
-    document.querySelector(".barra").addEventListener("click", function(){
+    document.querySelector(".btn-menu").addEventListener("click", function(){
       const mobile = document.querySelector(".menu-mobile-oculto");
       const visible = mobile.style.display!=='block';
       if (visible){
